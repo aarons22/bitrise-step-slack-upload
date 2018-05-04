@@ -40,7 +40,10 @@ workflows:
           file if you would not specify another value.
         run_if: true
         inputs:
-        - example_step_input: Example Step Input's value
+        - file_path_input: /path/to/file
+        - slack_token_input: token
+        - slack_channel_input: "#channel"
+        - slack_comment_input: "test comment"
     - script:
         inputs:
         - content: |
