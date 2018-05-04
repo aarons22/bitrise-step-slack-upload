@@ -64,21 +64,31 @@ toolkit:
 
 
 inputs:
-  - file_path_input: $BITRISE_FILE_PATH
+  - file_path_input:
     opts:
       title: "File Path"
       is_expand: false
       is_required: true
   - slack_token_input:
     opts:
-      title: "Slack Token"
-      is_expand: false
+      title: "Slack API Token"
+      summary: API token of the bot or user that will post the file.
+      description: |
+        For development and testing, use a legacy token: https://api.slack.com/custom-integrations/legacy-tokens
+
+        For production, use create a custom integration bot: https://YOUR-TEAM.slack.com/apps/manage/custom-integrations
+      is_expand: true
       is_required: true
   - slack_channel_input:
     opts:
       title: "Slack Channel"
       is_expand: false
       is_required: true
+  - slack_title_input:
+    opts:
+      title: "Slack Post Title"
+      is_expand: false
+      is_required: false
   - slack_comment_input:
     opts:
       title: "Slack Comment"
