@@ -67,7 +67,7 @@ inputs:
   - file_path_input:
     opts:
       title: "File Path"
-      is_expand: false
+      is_expand: true
       is_required: true
   - slack_token_input:
     opts:
@@ -82,15 +82,15 @@ inputs:
   - slack_channel_input:
     opts:
       title: "Slack Channel"
-      is_expand: false
+      is_expand: true
       is_required: true
   - slack_title_input:
     opts:
       title: "Slack Post Title"
-      is_expand: false
+      is_expand: true
       is_required: false
   - slack_comment_input:
     opts:
       title: "Slack Comment"
-      is_expand: false
+      is_expand: true
       is_required: false
